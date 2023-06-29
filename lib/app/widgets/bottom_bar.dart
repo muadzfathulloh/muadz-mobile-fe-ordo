@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:muadz_mobilefeordo/app/data/colors.dart';
 
 class BottomBar extends StatelessWidget {
@@ -26,39 +25,36 @@ class BottomBar extends StatelessWidget {
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
       onTap: onPressed,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: Get.width * 0.01),
-        child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 4.0),
-          width: Get.width * 0.18,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              selected
-                  ? SvgPicture.asset(
-                      'assets/icons/${iconEnable}.svg',
-                      width: 26,
-                      height: 26,
-                    )
-                  : SvgPicture.asset(
-                      'assets/icons/${iconDisable}.svg',
-                      width: 24,
-                      height: 24,
-                    ),
-              FittedBox(
-                fit: BoxFit.fitWidth,
-                child: Text(
-                  text,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: kPoppins.copyWith(
-                      fontWeight: selected ? FontWeight.bold : FontWeight.w400,
-                      color: selected ? Colors.white : Colors.grey.shade300,
-                      fontSize: 11),
-                ),
-              )
-            ],
-          ),
+      child: SizedBox(
+        width: 80,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            selected
+                ? SvgPicture.asset(
+                    'assets/icons/${iconEnable}.svg',
+                    width: 18,
+                    height: 20,
+                  )
+                : SvgPicture.asset(
+                    'assets/icons/${iconDisable}.svg',
+                    width: 18,
+                    height: 20,
+                  ),
+            SizedBox(height: 5),
+            FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Text(
+                text,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: kPoppins.copyWith(
+                    fontWeight: selected ? FontWeight.bold : FontWeight.w400,
+                    color: selected ? Colors.white : Colors.grey.shade300,
+                    fontSize: 11),
+              ),
+            )
+          ],
         ),
       ),
     );
