@@ -7,14 +7,14 @@ class CustomAppBar extends AppBar {
     required String title,
     List<Widget>? actions,
   }) : super(
-            centerTitle: true,
-            backgroundColor: primaryColor,
-            elevation: 0,
-            title: Text(
-              title,
-              style:
-                  kPoppins.copyWith(fontSize: 15, fontWeight: FontWeight.w600),
-            ),
-            leadingWidth: 56,
-            actions: actions);
+          centerTitle: true,
+          backgroundColor: primaryColor,
+          elevation: 0,
+          title: Text(
+            title,
+            style: kPoppins.copyWith(fontSize: 15, fontWeight: FontWeight.w600),
+          ),
+          leadingWidth: 56,
+          actions: actions,
+        );
 }

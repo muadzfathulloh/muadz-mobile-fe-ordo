@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:muadz_mobilefeordo/presentation/main/widgets/leaderboard_session.dart';
 import 'package:muadz_mobilefeordo/presentation/main/widgets/perform_session.dart';
 import 'package:muadz_mobilefeordo/presentation/main/widgets/recent_session.dart';
 
@@ -37,6 +38,7 @@ class _HomeBottomSheetState extends State<HomeBottomSheet> {
                   SizedBox(height: 25),
                   RecentSession(),
                   SizedBox(height: 40),
+                  LeaderBoardSession(),
                 ],
               ),
             ),
